@@ -1,76 +1,142 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  
-  <title>&lt;2018 week 1&gt; | Magician’s room</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="很久没有写完整的东西。期间在朋友生日的时候给她写过一封信。回顾了去年下半年的一些文字，觉得那时还是没有荒废的，好歹有些阅读的感想吧。所以说无聊有趣都是相对的，在蹲考试监狱的日子里，什么都有趣。 但总体而言去年下半年真的过得非常糟烂，做了很多自杀袭击一样的事情，我以身试法地悟出了一个道理，你的理性能让步你的欲望一次，也能让第二第三第三千次，然后尽管你觉得一两次的让步无所谓，但实际上每一次的侥幸会把你">
-<meta property="og:type" content="article">
-<meta property="og:title" content="&lt;2018 week 1&gt;">
-<meta property="og:url" content="http://shiro1861.com/2018/01/28/2018-week-1/index.html">
-<meta property="og:site_name" content="Magician’s room">
-<meta property="og:description" content="很久没有写完整的东西。期间在朋友生日的时候给她写过一封信。回顾了去年下半年的一些文字，觉得那时还是没有荒废的，好歹有些阅读的感想吧。所以说无聊有趣都是相对的，在蹲考试监狱的日子里，什么都有趣。 但总体而言去年下半年真的过得非常糟烂，做了很多自杀袭击一样的事情，我以身试法地悟出了一个道理，你的理性能让步你的欲望一次，也能让第二第三第三千次，然后尽管你觉得一两次的让步无所谓，但实际上每一次的侥幸会把你">
-<meta property="og:updated_time" content="2018-05-05T17:56:52.486Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&lt;2018 week 1&gt;">
-<meta name="twitter:description" content="很久没有写完整的东西。期间在朋友生日的时候给她写过一封信。回顾了去年下半年的一些文字，觉得那时还是没有荒废的，好歹有些阅读的感想吧。所以说无聊有趣都是相对的，在蹲考试监狱的日子里，什么都有趣。 但总体而言去年下半年真的过得非常糟烂，做了很多自杀袭击一样的事情，我以身试法地悟出了一个道理，你的理性能让步你的欲望一次，也能让第二第三第三千次，然后尽管你觉得一两次的让步无所谓，但实际上每一次的侥幸会把你">
-  
-    <link rel="alternative" href="/atom.xml" title="Magician’s room" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shiro1861">
+
+    <title>2018 week 1 - Magician’s room</title>
+    <meta name="description" content="undefined">
+
+    <meta name="keywords"
+          content="">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+    </noscript>
+    <link rel="short icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mprogress.css">
+    <link rel="stylesheet" href="/css/open-iconic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously.
+         [c]2014 @scottjehl, Filament Group, Inc.
+         Licensed MIT
+         */
+        function loadCSS( href, before, media ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            function toggleMedia(){
+                var defined;
+                for( var i = 0; i < sheets.length; i++ ){
+                    if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                        defined = true;
+                    }
+                }
+                if( defined ){
+                    ss.media = media || "all";
+                }
+                else {
+                    setTimeout( toggleMedia );
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+    </script>
 </head>
 <body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home客廳</a></li><li><a href="/archives">Archives存檔</a></li><li><a href="/about">Hi小法師</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://shiro1861.com"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="[post]-2018-week-1" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2018/01/28/2018-week-1/" class="article-date">
-  <time datetime="2018-01-27T17:55:05.000Z" itemprop="datePublished">2018-01-28</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shiro1861</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      &lt;2018 week 1&gt;
-    </h1>
-  
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>很久没有写完整的东西。期间在朋友生日的时候给她写过一封信。回顾了去年下半年的一些文字，觉得那时还是没有荒废的，好歹有些阅读的感想吧。所以说无聊有趣都是相对的，在蹲考试监狱的日子里，什么都有趣。</p>
+<div id="app">
+    <nav ref="navBar" class="navbar fixed-top navbar-light">
+    <div id="global-loading-indicator" class="progress-line global-loading-indicator"></div>
+    <div id="nav_background" class="nav-background"></div>
+    <div style="padding-left: 15px;padding-right: 15px" class="container container-narrow nav-content">
+
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" data-toggle="adropdown">
+            <span class="oi" data-glyph="menu"></span>
+        </button>
+        <a id="nav_title" class="navbar-brand Montserrat" href="/">
+            Magician’s room
+        </a>
+        <div class="float-right navbar-dark nav-icon-group">
+            <div class="dropdown">
+                <ul class="dropdown-menu" id="collapsed_nav">
+                    <li><a href="/" class="a-block nav-icon">首页</a></li>
+                    <li><a href="/archives" class="a-block nav-icon">归档</a></li>
+                    
+                    
+                    <li><a href="/about/index.html" class="a-block nav-icon">Hi小法師</a></li>
+                    
+                    
+                    <li><a href="/atom.xml" target="_blank" class="a-block">
+                            <span data-glyph="rss" class="oi nav-icon"></span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+    <div class="container container-narrow">
+
+        <div ref="pageHead"
+             v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"
+             class="page-head">
+            <a href="/">
+                <h2>Magician’s room</h2>
+                <h5>null</h5>
+            </a>
+        </div>
+
+<div class="row stream-container">
+    <div class="card-container">
+
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>2018 week 1</h2>
+
+                    <div>
+                        <p>
+                            <time datetime="2018-01-27T17:55:05.000Z" itemprop="datePublished">
+                                2018-01-28 01:55
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/log/'>log</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <p>很久没有写完整的东西。期间在朋友生日的时候给她写过一封信。回顾了去年下半年的一些文字，觉得那时还是没有荒废的，好歹有些阅读的感想吧。所以说无聊有趣都是相对的，在蹲考试监狱的日子里，什么都有趣。</p>
 <p>但总体而言去年下半年真的过得非常糟烂，做了很多自杀袭击一样的事情，我以身试法地悟出了一个道理，你的理性能让步你的欲望一次，也能让第二第三第三千次，然后尽管你觉得一两次的让步无所谓，但实际上每一次的侥幸会把你的理性通通毁掉，而最后你会一事无成得过且过，这他妈非常地糟烂，不能再来第二次了。自毁并不好玩，也不酷。我的意志力也并不强，事实上是根本经不起考验，所以我还是给自己挂个警钟，这个警钟大概就是不停地把这些蠢想法写下来。</p>
 <p>在不写总结的日子里，其实也读书，也思考，只不过没有输出，写日记的习惯也没能坚持，只是觉得也没有什么事情大到需要翻开本子写下来，也没有太多的话想对自己说。周一酷似周二三四五，只是周一特别堵，这样的日子需要总结一些什么，我暂时没找到。况且现在的感想都很简洁，在手机里用note记一下就好，不用矫情地背着本子和笔。但现在回头看看，少了写日记这个动作，好像少了一双眼睛检视自己，会变得比较被动麻木。</p>
 <p>习惯了工作的节奏以后，那种被生活绑架的感觉倒也不是很强烈了，但其实多少还是有的。我还是倾向于一个人行动吧，如果可以的话，至少在我的界域一切都在我的掌控中，那种感觉还是很好的。</p>
@@ -108,67 +174,65 @@
 <p>如果我搜集的这些烂石子暂时还不能发出好看的光，那就等着，因为最初相信它们不是石头而是宝石并把它们捡起来的人，是我啊。尽管，我不确信我希望去到的下一个平台是不是另一个坑，但好歹人往高处走也不太会有错，坑就坑吧，好歹也是个陨石坑。</p>
 <p>我没有在年头列愿望清单的习惯，但今年我自己列了几件事，现在在进行的有两件。我现在真的体会到这件事的曲折了。但anyway吧，总要行动起来。</p>
 
+                    </p>
+
+                    <nav class="pagination" role="pagination">
     
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2017/12/31/WEEKLY DEC 31/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">
-        
-          WEEKLY Dec 31
-        
-      </div>
+    <a class="newer-posts" href="/2018/02/21/2018-week-2/">
+        上一篇: 2018 week 2
     </a>
-  
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2017/11/26/WEEKLY Nov 19/">
+        下一篇: WEEKLY Nov 19
+    </a>
+    
 </nav>
 
-  
-</article>
-
-
-
-
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:shiro1861.com">
-  </form>
 </div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2018 Shiro1861<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
+
+<footer>
+    <p>
+        &copy;&nbsp;2018&nbsp;<a target="_blank"
+                                                               href="">Shiro1861</a>
+    </p>
+
+    
+    <p>Theme&nbsp;<a target="_blank"
+                     href="https://github.com/SumiMakito/hexo-theme-journal">Journal.</a>&nbsp;by&nbsp;<a
+                target="_blank" href="https://www.keep.moe">Makito</a>
+    </p>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <p>
+        Proudly published with&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>
+    </p>
+</footer>
+
+</div>
+</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src=" /js/vue.min.js"></script>
+<script src=" /js/journal.js"></script>
+<script>
+    loadCSS("//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons");
+</script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#global-loading-indicator").fadeOut(600);
+    });
+</script>
 
-
-<script src="/js/script.js"></script>
-  </div>
 </body>
 </html>

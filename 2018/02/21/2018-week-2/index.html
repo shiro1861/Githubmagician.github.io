@@ -1,0 +1,241 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shiro1861">
+
+    <title>2018 week 2 - Magician’s room</title>
+    <meta name="description" content="undefined">
+
+    <meta name="keywords"
+          content="">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+    </noscript>
+    <link rel="short icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mprogress.css">
+    <link rel="stylesheet" href="/css/open-iconic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously.
+         [c]2014 @scottjehl, Filament Group, Inc.
+         Licensed MIT
+         */
+        function loadCSS( href, before, media ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            function toggleMedia(){
+                var defined;
+                for( var i = 0; i < sheets.length; i++ ){
+                    if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                        defined = true;
+                    }
+                }
+                if( defined ){
+                    ss.media = media || "all";
+                }
+                else {
+                    setTimeout( toggleMedia );
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+    </script>
+</head>
+<body>
+
+<div id="app">
+    <nav ref="navBar" class="navbar fixed-top navbar-light">
+    <div id="global-loading-indicator" class="progress-line global-loading-indicator"></div>
+    <div id="nav_background" class="nav-background"></div>
+    <div style="padding-left: 15px;padding-right: 15px" class="container container-narrow nav-content">
+
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" data-toggle="adropdown">
+            <span class="oi" data-glyph="menu"></span>
+        </button>
+        <a id="nav_title" class="navbar-brand Montserrat" href="/">
+            Magician’s room
+        </a>
+        <div class="float-right navbar-dark nav-icon-group">
+            <div class="dropdown">
+                <ul class="dropdown-menu" id="collapsed_nav">
+                    <li><a href="/" class="a-block nav-icon">首页</a></li>
+                    <li><a href="/archives" class="a-block nav-icon">归档</a></li>
+                    
+                    
+                    <li><a href="/about/index.html" class="a-block nav-icon">Hi小法師</a></li>
+                    
+                    
+                    <li><a href="/atom.xml" target="_blank" class="a-block">
+                            <span data-glyph="rss" class="oi nav-icon"></span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+    <div class="container container-narrow">
+
+        <div ref="pageHead"
+             v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"
+             class="page-head">
+            <a href="/">
+                <h2>Magician’s room</h2>
+                <h5>null</h5>
+            </a>
+        </div>
+
+<div class="row stream-container">
+    <div class="card-container">
+
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>2018 week 2</h2>
+
+                    <div>
+                        <p>
+                            <time datetime="2018-02-21T15:37:57.000Z" itemprop="datePublished">
+                                2018-02-21 23:37
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/log/'>log</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <p>说好的周记变成了月记。在吃和睡之中度过了春节假期，该做的事没做，不该做的事做了一大堆，熬夜，瞎看电视剧，吃零食。<br>说实在的不知道为什么到了一个很失落的阶段，觉得想做的事都无法达成，制定的计划都被自己破坏，仿佛自去年考试以来形成的惯性。我现在真正明白“心似平原走马，易放难收”的含义了——能破坏纪律一次，就有第一千次。<br>但有时候又不想活得那么严苛那么疲惫。任何优化或恶化都不是一个点，而是一个过程，只能慢慢积累正确的东西。</p>
+<p>说起来真的很奇怪，离开学校之后，表达的欲望少了很多，只有些零散的思绪。但是实打实的反思却多了很多，开始关注有关目标的细节。离开学校这半年来，感到自己对自己的“觉察”越来越弱，常常无意识地浪费时间，既没有短期目标也没有短期反馈，总之就是没人说你干的怎样，我自己也并不急着改变什么。但时间就在那里，非常有限，如果不能坚持对自己的觉察而任由自己浪费时间，就是自杀式袭击啊。</p>
+<p>工作也常常不太走心，并认为工作过于简单而不去总结反思改进，沉迷于固有的方法和思路。并且无心精进自己从事行业的知识，借口就是“我不喜欢”，但你必须在一个行业做出点成绩，才是跳槽或进修的资本，如果三年过去你对专业领域还是狗屁不通，想要更上一层楼更是痴人说梦。所以不论喜欢与否，就像对待课业一样对待你的专业领域知识，不要抵触，更不能想着反正迟早都要改行，何必做好。相反，正是因为要转变方向，谋求新的可能，才更要把手头的事情做好。这不是一个可选项，而是必达项。</p>
+<p>那不如在这里反思一下入职四个月以来的工作状态：</p>
+<ul>
+<li>心浮气躁，不愿意听一些senior的建议和批评</li>
+<li>有时候等到senior催了才去拿资料or补程序，但事前已经意识到可能有问题，但并没有主动问</li>
+<li>有时候因为没事做，就喜欢拖延，比如先wander一会才开始做事，这种习惯很不好，还是要先完成手边工作，完成之后闲不闲再说</li>
+</ul>
+<p>顺便反思一下课余状态：</p>
+<ul>
+<li>喜欢做不动脑的事情，比如看电视，浪费很多时间</li>
+<li>很不在意时间被人占用，并自我感知为“陪伴”<ul>
+<li>要有自己的时间预算和底线，陪伴不是无止境的，你也有自己的生活，用行动告知他人，不必说道理</li>
+</ul>
+</li>
+<li>拿起手机就喜欢看朋友圈放松，但实际短暂的间歇可以做更多有益而有趣的事<ul>
+<li>背日文单词、看kindle（放一本比较适合零碎时间看的书比如语录&amp;诗集）</li>
+</ul>
+</li>
+<li>间歇性的暴饮暴食依然没有改掉，正在努力寻求转移注意力的方式</li>
+<li>实际的阅读时间太少，多为零散的通勤或睡前时间<ul>
+<li>坚持零碎时间，晚间如果有条件，强制读一个小时书</li>
+</ul>
+</li>
+</ul>
+<p>再反思一下对于长期目标的追求：</p>
+<ul>
+<li>说是要读书，但没有仔细了解过目标学校的各种政策，say招生时间、条件和奖学金等</li>
+<li>没有刻意训练长时间集中注意力的能力，但实际上已经很弱了</li>
+<li>无意识的学习太多，有意识的太少，总是在逃避动脑，但总觉得“看过就是学了”，没有输出</li>
+<li>没有刻意去训练素描基本功，总是在原地打转（画自己画得顺手的东西）</li>
+<li>减肥，间歇性暴食另体重很快反弹，但仍然在坚持锻炼和健康饮食<ul>
+<li>不开电视就没有待着吃东西的理由，所以不能开电视无所事事</li>
+</ul>
+</li>
+</ul>
+<p>其实不知道为什么，工作这段时间，看到仍在读书的同辈，总会觉得自己掉队了，成长曲线越来越平缓，感到焦虑，但无奈推力不足无法有有效的行动。于是就放人这种消极的厌世的情感生长，但回头看看这不就是废掉自己的开始吗。总是丧气总是抱怨没有机会没有资本，家世不如人条件不如人，自己却不在自己的能力圈里尽力而为，然后还要说些眼高手低的发言，然后还要放弃改变自己，放弃反思现状。消极怠工，说些漂亮话，都不会让现状变得更好。</p>
+<p>尽管觉得生活没半毛钱盼头却还要往前走，硬着头皮期待每一个相似无味的日子，硬着头皮为自己创造每一天的惊喜，用行动去摧毁思想和文字的消极。放假的头一天我自己做了一次大扫除，感觉毫无头绪以及烦躁的时候，收拾一下环境就很好。就很好。</p>
+<p>我总觉得时间不够了我要快点，我总觉得被追着往前跑，但无法思考清楚下一步的行动，于是只好不断行动。</p>
+
+                    </p>
+
+                    <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2018/03/04/2018-week-3/">
+        上一篇: 2018 week 3
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2018/01/28/2018-week-1/">
+        下一篇: 2018 week 1
+    </a>
+    
+</nav>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>
+        &copy;&nbsp;2018&nbsp;<a target="_blank"
+                                                               href="">Shiro1861</a>
+    </p>
+
+    
+    <p>Theme&nbsp;<a target="_blank"
+                     href="https://github.com/SumiMakito/hexo-theme-journal">Journal.</a>&nbsp;by&nbsp;<a
+                target="_blank" href="https://www.keep.moe">Makito</a>
+    </p>
+    
+
+    <p>
+        Proudly published with&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>
+    </p>
+</footer>
+
+</div>
+</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src=" /js/vue.min.js"></script>
+<script src=" /js/journal.js"></script>
+<script>
+    loadCSS("//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons");
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#global-loading-indicator").fadeOut(600);
+    });
+</script>
+
+</body>
+</html>

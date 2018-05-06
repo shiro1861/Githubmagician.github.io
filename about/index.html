@@ -1,76 +1,125 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hi小法師 | Magician’s room</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="嗨;-)很高興認識你。 關於我白天是會計師，黃昏之後是魔法師。實際上只是個身心健康的離退休老幹部 目前的修行是考證和劍道訓練。 愛好廣泛，心寬體胖：  健身 閱讀 推理和科幻是我的最愛 近期在努力補完Games of Throne系列   攝影 使用iPhone 4S拍攝(赤貧中)   書寫 我是說寫日記和寫鋼筆字啦   繪畫 聽音樂 聽過18,615支歌   看電影 看了470部片">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hi小法師">
-<meta property="og:url" content="http://shiro1861.com/about/index.html">
-<meta property="og:site_name" content="Magician’s room">
-<meta property="og:description" content="嗨;-)很高興認識你。 關於我白天是會計師，黃昏之後是魔法師。實際上只是個身心健康的離退休老幹部 目前的修行是考證和劍道訓練。 愛好廣泛，心寬體胖：  健身 閱讀 推理和科幻是我的最愛 近期在努力補完Games of Throne系列   攝影 使用iPhone 4S拍攝(赤貧中)   書寫 我是說寫日記和寫鋼筆字啦   繪畫 聽音樂 聽過18,615支歌   看電影 看了470部片">
-<meta property="og:updated_time" content="2017-07-20T08:14:16.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hi小法師">
-<meta name="twitter:description" content="嗨;-)很高興認識你。 關於我白天是會計師，黃昏之後是魔法師。實際上只是個身心健康的離退休老幹部 目前的修行是考證和劍道訓練。 愛好廣泛，心寬體胖：  健身 閱讀 推理和科幻是我的最愛 近期在努力補完Games of Throne系列   攝影 使用iPhone 4S拍攝(赤貧中)   書寫 我是說寫日記和寫鋼筆字啦   繪畫 聽音樂 聽過18,615支歌   看電影 看了470部片">
-  
-    <link rel="alternative" href="/atom.xml" title="Magician’s room" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shiro1861">
+
+    <title>Hi小法師 - Magician’s room</title>
+    <meta name="description" content="undefined">
+
+    <meta name="keywords"
+          content="">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+    </noscript>
+    <link rel="short icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mprogress.css">
+    <link rel="stylesheet" href="/css/open-iconic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously.
+         [c]2014 @scottjehl, Filament Group, Inc.
+         Licensed MIT
+         */
+        function loadCSS( href, before, media ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            function toggleMedia(){
+                var defined;
+                for( var i = 0; i < sheets.length; i++ ){
+                    if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                        defined = true;
+                    }
+                }
+                if( defined ){
+                    ss.media = media || "all";
+                }
+                else {
+                    setTimeout( toggleMedia );
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+    </script>
 </head>
 <body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home客廳</a></li><li><a href="/archives">Archives存檔</a></li><li><a href="/about">Hi小法師</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://shiro1861.com"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="page-undefined" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/about/index.html" class="article-date">
-  <time datetime="2017-07-20T03:25:00.000Z" itemprop="datePublished">2017-07-20</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shiro1861</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      Hi小法師
-    </h1>
-  
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>嗨;-)很高興認識你。</p>
+<div id="app">
+    <nav ref="navBar" class="navbar fixed-top navbar-light">
+    <div id="global-loading-indicator" class="progress-line global-loading-indicator"></div>
+    <div id="nav_background" class="nav-background"></div>
+    <div style="padding-left: 15px;padding-right: 15px" class="container container-narrow nav-content">
+
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" data-toggle="adropdown">
+            <span class="oi" data-glyph="menu"></span>
+        </button>
+        <a id="nav_title" class="navbar-brand Montserrat" href="/">
+            Magician’s room
+        </a>
+        <div class="float-right navbar-dark nav-icon-group">
+            <div class="dropdown">
+                <ul class="dropdown-menu" id="collapsed_nav">
+                    <li><a href="/" class="a-block nav-icon">首页</a></li>
+                    <li><a href="/archives" class="a-block nav-icon">归档</a></li>
+                    
+                    
+                    <li><a href="/about/index.html" class="a-block nav-icon">Hi小法師</a></li>
+                    
+                    
+                    <li><a href="/atom.xml" target="_blank" class="a-block">
+                            <span data-glyph="rss" class="oi nav-icon"></span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+    <div class="container container-narrow">
+
+        <div ref="pageHead"
+             v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"
+             class="page-head">
+            <a href="/">
+                <h2>Magician’s room</h2>
+                <h5>null</h5>
+            </a>
+        </div>
+
+<div class="row stream-container">
+    <div class="card-container">
+
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>Hi小法師</h2>
+
+                    
+
+                    <p class="post-block-desc">
+                        <p>嗨;-)很高興認識你。</p>
 <h6 id="關於我"><a href="#關於我" class="headerlink" title="關於我"></a>關於我</h6><p>白天是會計師，黃昏之後是魔法師。<del>實際上只是個身心健康的離退休老幹部</del></p>
 <p>目前的修行是考證和劍道訓練。</p>
 <p>愛好廣泛，心寬體胖：</p>
@@ -100,53 +149,51 @@
 </li>
 </ul>
 
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-			</span>
-		</div>
-	</footer>
-	
-    
-  
-</article>
+                    </p>
 
-
-
-
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:shiro1861.com">
-  </form>
 </div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2018 Shiro1861<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
+
+<footer>
+    <p>
+        &copy;&nbsp;2018&nbsp;<a target="_blank"
+                                                               href="">Shiro1861</a>
+    </p>
+
+    
+    <p>Theme&nbsp;<a target="_blank"
+                     href="https://github.com/SumiMakito/hexo-theme-journal">Journal.</a>&nbsp;by&nbsp;<a
+                target="_blank" href="https://www.keep.moe">Makito</a>
+    </p>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <p>
+        Proudly published with&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>
+    </p>
+</footer>
+
+</div>
+</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src=" /js/vue.min.js"></script>
+<script src=" /js/journal.js"></script>
+<script>
+    loadCSS("//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons");
+</script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#global-loading-indicator").fadeOut(600);
+    });
+</script>
 
-
-<script src="/js/script.js"></script>
-  </div>
 </body>
 </html>

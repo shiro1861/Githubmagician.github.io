@@ -1,249 +1,358 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Tag: log | Magician’s room</title>
-  <meta name="viewport" content="width=device-width">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Magician’s room">
-<meta property="og:url" content="http://shiro1861.com/tags/log/page/2/index.html">
-<meta property="og:site_name" content="Magician’s room">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Magician’s room">
-  
-    <link rel="alternative" href="/atom.xml" title="Magician’s room" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shiro1861">
+
+    <title>标签: log - Magician’s room</title>
+    <meta name="description" content="undefined">
+
+    <meta name="keywords"
+          content="">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+    </noscript>
+    <link rel="short icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mprogress.css">
+    <link rel="stylesheet" href="/css/open-iconic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously.
+         [c]2014 @scottjehl, Filament Group, Inc.
+         Licensed MIT
+         */
+        function loadCSS( href, before, media ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            function toggleMedia(){
+                var defined;
+                for( var i = 0; i < sheets.length; i++ ){
+                    if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                        defined = true;
+                    }
+                }
+                if( defined ){
+                    ss.media = media || "all";
+                }
+                else {
+                    setTimeout( toggleMedia );
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+    </script>
 </head>
 <body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home客廳</a></li><li><a href="/archives">Archives存檔</a></li><li><a href="/about">Hi小法師</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://shiro1861.com"></form>
-	</div>
-</header>
-    <div id="main">
-      
-  <div class="archive">
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-09-17T11:29:52.000Z"><a href="/2017/09/17/magician-s-log-W6/">2017-09-17</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/09/17/magician-s-log-W6/">magician&#39;s log W6</a></h1>
-              
-            
-          </header>
+
+<div id="app">
+    <nav ref="navBar" class="navbar fixed-top navbar-light">
+    <div id="global-loading-indicator" class="progress-line global-loading-indicator"></div>
+    <div id="nav_background" class="nav-background"></div>
+    <div style="padding-left: 15px;padding-right: 15px" class="container container-narrow nav-content">
+
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" data-toggle="adropdown">
+            <span class="oi" data-glyph="menu"></span>
+        </button>
+        <a id="nav_title" class="navbar-brand Montserrat" href="/">
+            Magician’s room
+        </a>
+        <div class="float-right navbar-dark nav-icon-group">
+            <div class="dropdown">
+                <ul class="dropdown-menu" id="collapsed_nav">
+                    <li><a href="/" class="a-block nav-icon">首页</a></li>
+                    <li><a href="/archives" class="a-block nav-icon">归档</a></li>
+                    
+                    
+                    <li><a href="/about/index.html" class="a-block nav-icon">Hi小法師</a></li>
+                    
+                    
+                    <li><a href="/atom.xml" target="_blank" class="a-block">
+                            <span data-glyph="rss" class="oi nav-icon"></span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
         </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-09-10T11:29:52.000Z"><a href="/2017/09/10/magician-s-log-W5/">2017-09-10</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/09/10/magician-s-log-W5/">magician&#39;s log W5</a></h1>
-              
-            
-          </header>
+    </div>
+</nav>
+    <div class="container container-narrow">
+
+        <div ref="pageHead"
+             v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"
+             class="page-head">
+            <a href="/">
+                <h2>Magician’s room</h2>
+                <h5>null</h5>
+            </a>
         </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-09-03T15:06:13.000Z"><a href="/2017/09/03/magician-s-log-W4/">2017-09-03</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/09/03/magician-s-log-W4/">magician&#39;s log W4</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-08-27T15:00:06.000Z"><a href="/2017/08/27/magician-s-log-W3/">2017-08-27</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/08/27/magician-s-log-W3/">magician&#39;s log W3</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-08-20T12:04:34.000Z"><a href="/2017/08/20/magician-s-log-W2/">2017-08-20</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/08/20/magician-s-log-W2/">magician&#39;s log W2</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-08-13T15:05:31.000Z"><a href="/2017/08/13/magician-s-log-W1/">2017-08-13</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/08/13/magician-s-log-W1/">magician&#39;s log W1</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-08-04T09:57:45.000Z"><a href="/2017/08/04/病休筆記/">2017-08-04</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/08/04/病休筆記/">病休筆記</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-07-28T13:55:55.000Z"><a href="/2017/07/28/magician今天有點長/">2017-07-28</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/07/28/magician今天有點長/">magician今天有點長</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-07-27T15:27:50.000Z"><a href="/2017/07/27/magician-s-log-day9/">2017-07-27</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/07/27/magician-s-log-day9/">magician&#39;s log day9</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post post">
-        <footer class="entry-meta-header">
-          <span class="meta-elements date">
-            <time datetime="2017-07-26T15:36:12.000Z"><a href="/2017/07/26/magician-s-log-day8/">2017-07-26</a></time>
-          </span>
-        </footer>
-        <div class="entry-content">
-          <header>
-            
-              
-                <h1><a href="/2017/07/26/magician-s-log-day8/">magician&#39;s log day8</a></h1>
-              
-            
-          </header>
-        </div>
-      </article>
-    
-  </div>
+
+<h3 class="section-title">标签: log</h3>
+
+<div class="row stream-container">
+    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
 
     </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:shiro1861.com">
-  </form>
+    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
 </div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2018 Shiro1861<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
+
+<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
+    
+    <a class="newer-posts pagination-flex-left" href="/tags/log/">← 上一页</a>
+    
+    <span class="page-number pagination-flex-center">
+                        第 2/3 页
+                    </span>
+    
+    <a class="older-posts pagination-flex-right" href="/tags/log/page/3/">下一页 →</a>
+    
+</nav>
+
+<div id="__pending_post_item_container" style="display:none">
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/10/08/magician-s-log-W9/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W9</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志我就玩命写题。
+啰啰嗦嗦昨晚很无聊，就看自己在大学头两年在QQ空间写的说说，大一和大二几乎天天早起，有时候早得丧心病狂，面对任何考试都充满热血。那时虽不知前路何往，只觉得不能停驻。怀着这样的不安感做了很多事情，也得到了自己想得到的一些东西。那时还很喜欢和人分享的感觉，看到</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/10/01/magician-s-log-W8/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W8</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志这周对付完会计和菜馆的主观题了，然后接下来就是不断整理以及每天刷小题保持手感查漏补缺了。审计基本看过一遍真题的大题了，也知道是怎么个套路了，接下来是要整理决策框架然后背，配合卡牌系统。税法的五座大山的大题好像只有个税没过，其他也大体知道是什么情况了，接着就要整理小税种然后</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/09/24/magician-s-log-W7/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W7</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志这周开始大面积地对战大题，在做题中终于有了串联零碎知识点的感觉。
+审计发现就算不背什么东西也是可以答出题目，有时候思路还是很对头的，就是答案的语言太江湖气哈哈哈。果然疑神疑鬼的性格比较适合这行吗哈哈哈哈。发现其实每章考来考去无外乎就是几个东西，而且某魔法丛书整理出来的考点</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/09/17/magician-s-log-W6/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W6</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志会计前几天吐槽咒文宝典没啥大用，刷熟了之后觉得效果拔群。下周是必然要和大题决一死战了。
+菜馆电脑做计算题简直效果拔群哇啊啊啊！相见恨晚！刷大题的感觉，尽管都是套路，但就是做不对……感到真题会更灵活，重刷知识点之后发现一刷的卡牌做的不完整，当时设计的思路也太离奇了吧？！拿着</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/09/10/magician-s-log-W5/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W5</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志会计这周在整理咒文，整理三天，前面资产部分一马平川，进到负债和权益整个人都开始怀疑人生。好在只用了四天了结了咒文整理，但使用起来效果并不很好，感觉光看分录的话有点不明所以。打算回头看看书，将逻辑梳理连贯再刷。
+菜馆本周没有新动向，不过看完一遍课本之后再抽卡感觉思路比较清晰</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/09/03/magician-s-log-W4/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W4</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志又是又是又是又是新的一周啦，本周是一定要把四本大部头魔法丛书给攻克的。上两周算是勉强克服了下午荒废学习的坏习惯，不过总是会有失常的日子。这周需要快些行动，毕竟还有一个多月就要去试炼了。就像老克说的，没有渐渐地变好这回事，现在和未来之间并不存在距离，所谓时间，只是“行动和观</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/08/27/magician-s-log-W3/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W3</h4>
+                        
+                        <p class="clear-margin post-block-desc">对敌日志我觉得我没啥干劲的理由是这些知识内容本身没有威胁到我，我感受不到危机感……（自虐成瘾吗）
+税法终于终于终于终于准备结束了企业所得税的整理！！！让后再攻克个税和国际税收两个坑就万事大吉了！！！个税果然又是个大坑啊！！！
+本周的魔法温习好像没有特别厉害的心得，不过审计和菜馆开</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/08/20/magician-s-log-W2/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W2</h4>
+                        
+                        <p class="clear-margin post-block-desc">温习魔法log会计真正狡猾，一方面要理清大思路，理解整个业务是在做什么，另一方面又有计算和分录上的小细节需要死记（因为没什么道理）。狡猾的地方在于，大思路上又不像菜馆有明确的主线和情形，像流程图一样照着做就行，背记的东西又不像是公式。
+目前实践的心得：
+
+小题，先看题干，明确考点</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/08/13/magician-s-log-W1/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log W1</h4>
+                        
+                        <p class="clear-margin post-block-desc">打算把魔法研习日记转换成周记，不想噜苏那么多。
+进度病好后的这周放弃了看《三国演义》，转为看《未来简史》，四天后的进度是82%，虽然一开始看的时候心潮澎湃有发现新大陆的感觉，不过接近尾声处又觉整本书基调悲观令人绝望，而且我觉得书里的句子给人一种傲慢的感觉，比如这样的句子：
+
+21</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2017/08/04/病休筆記/" rel="noopener noreferrer">
+                
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell"><h4 class="clear-margin">病休筆記</h4>
+                        
+                        <p class="clear-margin post-block-desc">上次在日記里寫希望第二天好起來，結果並沒有好起來啊！被高高低低的燒連續折磨，因為頭痛只能看無聊的電視劇和電影度日，嚴重缺乏睡眠。
+真的我覺得電視節目的設計機理是假設觀眾是白癡還是怎麼的。不過我居然看完了大軍師司馬懿之軍師聯盟，吳秀波還挺帥啊。
+懷舊地看了中央六套的電影，我居然很懷</p></div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    <p>
+        &copy;&nbsp;2018&nbsp;<a target="_blank"
+                                                               href="">Shiro1861</a>
+    </p>
+
+    
+    <p>Theme&nbsp;<a target="_blank"
+                     href="https://github.com/SumiMakito/hexo-theme-journal">Journal.</a>&nbsp;by&nbsp;<a
+                target="_blank" href="https://www.keep.moe">Makito</a>
+    </p>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <p>
+        Proudly published with&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>
+    </p>
+</footer>
+
+</div>
+</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src=" /js/vue.min.js"></script>
+<script src=" /js/journal.js"></script>
+<script>
+    loadCSS("//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons");
+</script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+    let cachedPostsNodes;
+    let leftContainer;
+    let rightContainer;
+    let lastColumnCount;
+    let loadingIndicator;
 
+    $(document).ready(function () {
+        loadingIndicator = $("#global-loading-indicator");
 
-<script src="/js/script.js"></script>
-  </div>
+        lastColumnCount = -1;
+        leftContainer = $('#stream_inner_left');
+        rightContainer = $('#stream_inner_right');
+
+        function reLayoutPosts() {
+            // suppress unnecessary re-layouts
+            let columnCount = window.innerWidth < 768 ? 1 : 2;
+            if (columnCount === lastColumnCount)return;
+            loadingIndicator.show();
+            lastColumnCount = columnCount;
+            let leftHeight = 0;
+            let rightHeight = 0;
+            leftContainer.empty();
+            rightContainer.empty();
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
+                if (columnCount === 1 || leftHeight <= rightHeight) {
+                    leftContainer.append(post);
+                    leftHeight += post.height();
+                } else {
+                    rightContainer.append(post);
+                    rightHeight += post.height();
+                }
+            }
+            loadingIndicator.fadeOut(600);
+        }
+
+        $(window).resize(function () {
+            reLayoutPosts();
+        });
+
+        reLayoutPosts();
+    });
+</script>
+
 </body>
 </html>

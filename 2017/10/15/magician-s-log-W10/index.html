@@ -1,77 +1,142 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  
-  <title>magician&#39;s log W10 | Magician’s room</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="对敌日志最后一次写对敌日志，希望不要再见了，后会无期！ 这周我还是玩命写题。 啰啰嗦嗦太可怕了，在写这最后一周的log的时候，发现下次总结日就是考完试的日子了。这段日子要结束了。我并不知道这段日子给了我什么东西，说不清楚，欸，说不清楚。尽管我对有些事，比如注册魔法师试炼这件事，早早地就做了打算，也明知道它很重要，但当真实行的时候总是意外状况诸多，在这么长的时间中，总是有各种偏离轨道的情况，现在回头">
-<meta name="keywords" content="log">
-<meta property="og:type" content="article">
-<meta property="og:title" content="magician&#39;s log W10">
-<meta property="og:url" content="http://shiro1861.com/2017/10/15/magician-s-log-W10/index.html">
-<meta property="og:site_name" content="Magician’s room">
-<meta property="og:description" content="对敌日志最后一次写对敌日志，希望不要再见了，后会无期！ 这周我还是玩命写题。 啰啰嗦嗦太可怕了，在写这最后一周的log的时候，发现下次总结日就是考完试的日子了。这段日子要结束了。我并不知道这段日子给了我什么东西，说不清楚，欸，说不清楚。尽管我对有些事，比如注册魔法师试炼这件事，早早地就做了打算，也明知道它很重要，但当真实行的时候总是意外状况诸多，在这么长的时间中，总是有各种偏离轨道的情况，现在回头">
-<meta property="og:updated_time" content="2017-10-13T15:34:56.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="magician&#39;s log W10">
-<meta name="twitter:description" content="对敌日志最后一次写对敌日志，希望不要再见了，后会无期！ 这周我还是玩命写题。 啰啰嗦嗦太可怕了，在写这最后一周的log的时候，发现下次总结日就是考完试的日子了。这段日子要结束了。我并不知道这段日子给了我什么东西，说不清楚，欸，说不清楚。尽管我对有些事，比如注册魔法师试炼这件事，早早地就做了打算，也明知道它很重要，但当真实行的时候总是意外状况诸多，在这么长的时间中，总是有各种偏离轨道的情况，现在回头">
-  
-    <link rel="alternative" href="/atom.xml" title="Magician’s room" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Shiro1861">
+
+    <title>magician&#39;s log W10 - Magician’s room</title>
+    <meta name="description" content="undefined">
+
+    <meta name="keywords"
+          content="">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <noscript>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons"/>
+    </noscript>
+    <link rel="short icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mprogress.css">
+    <link rel="stylesheet" href="/css/open-iconic.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+    <script>
+        /*!
+         loadCSS: load a CSS file asynchronously.
+         [c]2014 @scottjehl, Filament Group, Inc.
+         Licensed MIT
+         */
+        function loadCSS( href, before, media ){
+            "use strict";
+            var ss = window.document.createElement( "link" );
+            var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+            var sheets = window.document.styleSheets;
+            ss.rel = "stylesheet";
+            ss.href = href;
+            ss.media = "only x";
+            ref.parentNode.insertBefore( ss, ref );
+            function toggleMedia(){
+                var defined;
+                for( var i = 0; i < sheets.length; i++ ){
+                    if( sheets[ i ].href && sheets[ i ].href.indexOf( href ) > -1 ){
+                        defined = true;
+                    }
+                }
+                if( defined ){
+                    ss.media = media || "all";
+                }
+                else {
+                    setTimeout( toggleMedia );
+                }
+            }
+            toggleMedia();
+            return ss;
+        }
+    </script>
 </head>
 <body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home客廳</a></li><li><a href="/archives">Archives存檔</a></li><li><a href="/about">Hi小法師</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://shiro1861.com"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="post-magician-s-log-W10" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2017/10/15/magician-s-log-W10/" class="article-date">
-  <time datetime="2017-10-15T14:22:52.000Z" itemprop="datePublished">2017-10-15</time>
-</a>
-		</span>
-		<span class="meta-elements author">Shiro1861</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      magician&#39;s log W10
-    </h1>
-  
 
-	</header>
-	<div class="entry-content">
-		
-    	<h3 id="对敌日志"><a href="#对敌日志" class="headerlink" title="对敌日志"></a>对敌日志</h3><p>最后一次写对敌日志，希望不要再见了，后会无期！</p>
+<div id="app">
+    <nav ref="navBar" class="navbar fixed-top navbar-light">
+    <div id="global-loading-indicator" class="progress-line global-loading-indicator"></div>
+    <div id="nav_background" class="nav-background"></div>
+    <div style="padding-left: 15px;padding-right: 15px" class="container container-narrow nav-content">
+
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" data-toggle="adropdown">
+            <span class="oi" data-glyph="menu"></span>
+        </button>
+        <a id="nav_title" class="navbar-brand Montserrat" href="/">
+            Magician’s room
+        </a>
+        <div class="float-right navbar-dark nav-icon-group">
+            <div class="dropdown">
+                <ul class="dropdown-menu" id="collapsed_nav">
+                    <li><a href="/" class="a-block nav-icon">首页</a></li>
+                    <li><a href="/archives" class="a-block nav-icon">归档</a></li>
+                    
+                    
+                    <li><a href="/about/index.html" class="a-block nav-icon">Hi小法師</a></li>
+                    
+                    
+                    <li><a href="/atom.xml" target="_blank" class="a-block">
+                            <span data-glyph="rss" class="oi nav-icon"></span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</nav>
+    <div class="container container-narrow">
+
+        <div ref="pageHead"
+             v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"
+             class="page-head">
+            <a href="/">
+                <h2>Magician’s room</h2>
+                <h5>null</h5>
+            </a>
+        </div>
+
+<div class="row stream-container">
+    <div class="card-container">
+
+        <div class="card card-item clear-border card-top-patch card-clear-hover">
+            
+
+            <div class="card-item-container clear-flex-xs">
+                <div class="card-inner-cell">
+                    <h2>magician&#39;s log W10</h2>
+
+                    <div>
+                        <p>
+                            <time datetime="2017-10-15T14:22:52.000Z" itemprop="datePublished">
+                                2017-10-15 22:22
+                            </time>
+                            
+
+                            
+                            
+                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
+                            
+                            <a href='/tags/log/'>log</a>
+                            
+                            
+                            
+                        </p>
+                    </div>
+
+
+                    <p class=" post-block-desc">
+                        <h3 id="对敌日志"><a href="#对敌日志" class="headerlink" title="对敌日志"></a>对敌日志</h3><p>最后一次写对敌日志，希望不要再见了，后会无期！</p>
 <p>这周我还是玩命写题。</p>
 <h3 id="啰啰嗦嗦"><a href="#啰啰嗦嗦" class="headerlink" title="啰啰嗦嗦"></a>啰啰嗦嗦</h3><p>太可怕了，在写这最后一周的log的时候，发现下次总结日就是考完试的日子了。这段日子要结束了。我并不知道这段日子给了我什么东西，说不清楚，欸，说不清楚。尽管我对有些事，比如注册魔法师试炼这件事，早早地就做了打算，也明知道它很重要，但当真实行的时候总是意外状况诸多，在这么长的时间中，总是有各种偏离轨道的情况，现在回头想想，我觉得应该心意更坚定一些，但那时的我并不能左右自己的决定。现在反思过去的种种，总是有很多未尽人意的地方，但对于无法改变的事情，又实在是无能为力。</p>
 <p>所以我真的不太适合长期准备一件事，尤其是只是关乎生存与功利的公事，整个人会很疲沓和自闭。</p>
@@ -98,78 +163,65 @@
 <p>傍晚照例是锻炼，锻炼之前很酷地想：“这回我要扼住恐惧的脖子，掐死为止”。本来犹豫要不要回道馆稽古，不过想想，在这种时刻，还是自己待着冷静一会为好。直面心里的一切，恐惧、不安、虚妄和患得患失，感到自己是一个透明的水杯，只映出杯中物体的颜色。</p>
 <pre><code>2017-10-13 23:32:40
 </code></pre>
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
+                    </p>
 
-			</span>
-		</div>
-	</footer>
-	
+                    <nav class="pagination" role="pagination">
     
-<nav id="article-nav">
-  
-    <a href="/2017/10/22/WEEKLY Oct 22/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          WEEKLY Oct 22
-        
-      </div>
+    <a class="newer-posts" href="/2017/10/22/WEEKLY Oct 22/">
+        上一篇: WEEKLY Oct 22
     </a>
-  
-  
-    <a href="/2017/10/08/magician-s-log-W9/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">
-        
-          magician&#39;s log W9
-        
-      </div>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2017/10/08/magician-s-log-W9/">
+        下一篇: magician's log W9
     </a>
-  
+    
 </nav>
 
-  
-</article>
-
-
-
-
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:shiro1861.com">
-  </form>
 </div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">Magician’s room</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2018 Shiro1861<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
+
+<footer>
+    <p>
+        &copy;&nbsp;2018&nbsp;<a target="_blank"
+                                                               href="">Shiro1861</a>
+    </p>
+
+    
+    <p>Theme&nbsp;<a target="_blank"
+                     href="https://github.com/SumiMakito/hexo-theme-journal">Journal.</a>&nbsp;by&nbsp;<a
+                target="_blank" href="https://www.keep.moe">Makito</a>
+    </p>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <p>
+        Proudly published with&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>
+    </p>
+</footer>
+
+</div>
+</div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src=" /js/vue.min.js"></script>
+<script src=" /js/journal.js"></script>
+<script>
+    loadCSS("//fonts.googleapis.com/css?family=Source+Sans+Pro:400|Montserrat|Anonymous+Pro:400|Material+Icons");
+</script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#global-loading-indicator").fadeOut(600);
+    });
+</script>
 
-
-<script src="/js/script.js"></script>
-  </div>
 </body>
 </html>
