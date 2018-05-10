@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Shiro1861">
 
-    <title>归档: 2018/2 - Magician’s room</title>
+    <title>标签: log - Magician’s room</title>
     <meta name="description" content="undefined">
 
     <meta name="keywords"
@@ -106,16 +106,23 @@
             </a>
         </div>
 
-<div id="archive_container">
+<h3 class="section-title">标签: log</h3>
 
+<div class="row stream-container">
+    <div id="stream_inner_left" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
+    <div id="stream_inner_right" class="col-lg-6 col-md-6 col-no-h-padding">
+
+    </div>
 </div>
 
 <nav class="pagination pagination-flex outside-padding-patch" role="pagination">
     
-    <a class="older-posts pagination-flex-right"></a>
+    <a class="newer-posts pagination-flex-left" href="/tags/log/page/3/">← 上一页</a>
     
     <span class="page-number pagination-flex-center">
-                        第 1/1 页
+                        第 4/4 页
                     </span>
     
     <a class="older-posts pagination-flex-right"></a>
@@ -124,34 +131,22 @@
 
 <div id="__pending_post_item_container" style="display:none">
     
-    
-    <div>
-    <h3 class="section-title">
-        <a href="02">
-            2018/02
-        </a>
-    </h3>
-    
-
     <div class="card-container">
         <div class="card card-item clear-border card-top-patch">
-            <a class="a-block" href="/2018/02/21/2018-week-2/" rel="noopener noreferrer">
+            <a class="a-block" href="/2017/07/18/magician-s-log-day1/" rel="noopener noreferrer">
+                
                 <div class="card-item-container clear-flex-xs">
-                    <div class="card-inner-cell">
-                        <h4 class="clear-margin">2018 week 2</h4>
+                    <div class="card-inner-cell"><h4 class="clear-margin">magician&#39;s log day1</h4>
+                        
+                        <p class="clear-margin post-block-desc">小法師昨晚失眠到三點，早起計劃失敗第二次。
 
-                        <p class=" post-block-desc clear-margin">
-                            02-21
-                        </p>
-                    </div>
+早上寫日記反省自己近期怠惰的狀態，實在鼓不起勁的時候只好罵一罵自己（苦笑），儘管已經到了寫日記都無法警醒自己的階段了。
+中午開始整理會計租賃的導圖，然後做了題。依然還是錯一些沒頭沒腦的細節。發現在錯題集里回顧自己當時神一般的思路然後比</p></div>
                 </div>
             </a>
         </div>
     </div>
-
     
-    </div>
-
 </div>
 
 <footer>
@@ -186,10 +181,9 @@
 
 
 <script>
-    let archiveYearlyNodes;
+    let cachedPostsNodes;
     let leftContainer;
     let rightContainer;
-    let archiveContainer;
     let lastColumnCount;
     let loadingIndicator;
 
@@ -199,7 +193,6 @@
         lastColumnCount = -1;
         leftContainer = $('#stream_inner_left');
         rightContainer = $('#stream_inner_right');
-        archiveContainer = $('#archive_container');
 
         function reLayoutPosts() {
             // suppress unnecessary re-layouts
@@ -207,41 +200,20 @@
             if (columnCount === lastColumnCount)return;
             loadingIndicator.show();
             lastColumnCount = columnCount;
-            archiveContainer.empty();
+            let leftHeight = 0;
+            let rightHeight = 0;
+            leftContainer.empty();
             rightContainer.empty();
-            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
-            for (let i = 0; i < archiveYearlyNodes.length; i++) {
-                let leftHeight = 0;
-                let rightHeight = 0;
-
-                let yearly = $(archiveYearlyNodes[i]).clone();
-                let yearTitle = yearly.children()[0];
-                let yearContainer = $(document.createElement('div'));
-                let yearContainerInner = $(document.createElement('div'));
-                let yearContainerInnerL = $(document.createElement('div'));
-                let yearContainerInnerR = $(document.createElement('div'));
-                yearContainerInner.addClass("row stream-container");
-                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
-                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
-
-                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
-                yearContainer.append(yearTitle).append(yearContainerInner);
-                archiveContainer.append(yearContainer);
-
-                let postEntries = yearly.find("> .card-container");
-                for (let j = 0; j < postEntries.length; j++) {
-                    let post = $(postEntries[j]);
-                    if (columnCount === 1 || leftHeight <= rightHeight) {
-                        console.log("Left, +" + post.height());
-                        yearContainerInnerL.append(post);
-                        leftHeight += post.height();
-                    } else {
-                        console.log("Right, +" + post.height());
-                        yearContainerInnerR.append(post);
-                        rightHeight += post.height();
-                    }
+            cachedPostsNodes = $("#__pending_post_item_container").find("> .card-container");
+            for (let i = 0; i < cachedPostsNodes.length; i++) {
+                let post = $(cachedPostsNodes[i]).clone();
+                if (columnCount === 1 || leftHeight <= rightHeight) {
+                    leftContainer.append(post);
+                    leftHeight += post.height();
+                } else {
+                    rightContainer.append(post);
+                    rightHeight += post.height();
                 }
-
             }
             loadingIndicator.fadeOut(600);
         }
