@@ -7,7 +7,7 @@
     <meta name="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Shiro1861">
 
-    <title>2018 week 5 - Magician’s room</title>
+    <title>归档: 2018/9 - Magician’s room</title>
     <meta name="description" content="undefined">
 
     <meta name="keywords"
@@ -106,61 +106,52 @@
             </a>
         </div>
 
-<div class="row stream-container">
-    <div class="card-container">
+<div id="archive_container">
 
-        <div class="card card-item clear-border card-top-patch card-clear-hover">
-            
+</div>
 
-            <div class="card-item-container clear-flex-xs">
-                <div class="card-inner-cell">
-                    <h2>2018 week 5</h2>
-
-                    <div>
-                        <p>
-                            <time datetime="2018-05-10T15:27:47.000Z" itemprop="datePublished">
-                                2018-05-10 23:27
-                            </time>
-                            
-
-                            
-                            
-                            <span class="oi" data-glyph="tag" style="vertical-align: middle; margin-left: 5px"> </span>&nbsp;
-                            
-                            <a href='/tags/log/'>log</a>
-                            
-                            
-                            
-                        </p>
-                    </div>
-
-
-                    <p class=" post-block-desc">
-                        <p>在这个档口，我最缺的是时间和钱，悲欢离合爱恨憎会都是很奢侈的东西。</p>
-<p>我就像一块不知何处来不知往何处的石头，然而我想沉在河床的淤泥中，被打磨成好看的样子。</p>
-<p>我想就这样吧。</p>
-
-                    </p>
-
-                    <nav class="pagination" role="pagination">
+<nav class="pagination pagination-flex outside-padding-patch" role="pagination">
     
-    <a class="newer-posts" href="/2018/05/28/2018-week-6/">
-        上一篇: 2018 week 6
-    </a>
+    <a class="older-posts pagination-flex-right"></a>
     
-    <span class="page-number"></span>
+    <span class="page-number pagination-flex-center">
+                        第 1/1 页
+                    </span>
     
-    <a class="older-posts" href="/2018/05/06/2018-week-4/">
-        下一篇: 2018 week 4
-    </a>
+    <a class="older-posts pagination-flex-right"></a>
     
 </nav>
 
-                    
+<div id="__pending_post_item_container" style="display:none">
+    
+    
+    <div>
+    <h3 class="section-title">
+        <a href="09">
+            2018/09
+        </a>
+    </h3>
+    
+
+    <div class="card-container">
+        <div class="card card-item clear-border card-top-patch">
+            <a class="a-block" href="/2018/09/01/2018-week-11/" rel="noopener noreferrer">
+                <div class="card-item-container clear-flex-xs">
+                    <div class="card-inner-cell">
+                        <h4 class="clear-margin">2018 week 11</h4>
+
+                        <p class=" post-block-desc clear-margin">
+                            09-01
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
+
+    
+    </div>
+
 </div>
 
 <footer>
@@ -195,8 +186,71 @@
 
 
 <script>
+    let archiveYearlyNodes;
+    let leftContainer;
+    let rightContainer;
+    let archiveContainer;
+    let lastColumnCount;
+    let loadingIndicator;
+
     $(document).ready(function () {
-        $("#global-loading-indicator").fadeOut(600);
+        loadingIndicator = $("#global-loading-indicator");
+
+        lastColumnCount = -1;
+        leftContainer = $('#stream_inner_left');
+        rightContainer = $('#stream_inner_right');
+        archiveContainer = $('#archive_container');
+
+        function reLayoutPosts() {
+            // suppress unnecessary re-layouts
+            let columnCount = window.innerWidth < 768 ? 1 : 2;
+            if (columnCount === lastColumnCount)return;
+            loadingIndicator.show();
+            lastColumnCount = columnCount;
+            archiveContainer.empty();
+            rightContainer.empty();
+            archiveYearlyNodes = $("#__pending_post_item_container").find("> div");
+            for (let i = 0; i < archiveYearlyNodes.length; i++) {
+                let leftHeight = 0;
+                let rightHeight = 0;
+
+                let yearly = $(archiveYearlyNodes[i]).clone();
+                let yearTitle = yearly.children()[0];
+                let yearContainer = $(document.createElement('div'));
+                let yearContainerInner = $(document.createElement('div'));
+                let yearContainerInnerL = $(document.createElement('div'));
+                let yearContainerInnerR = $(document.createElement('div'));
+                yearContainerInner.addClass("row stream-container");
+                yearContainerInnerL.addClass("col-lg-6 col-md-6 col-no-h-padding");
+                yearContainerInnerR.addClass("col-lg-6 col-md-6 col-no-h-padding");
+
+                yearContainerInner.append(yearContainerInnerL).append(yearContainerInnerR);
+                yearContainer.append(yearTitle).append(yearContainerInner);
+                archiveContainer.append(yearContainer);
+
+                let postEntries = yearly.find("> .card-container");
+                for (let j = 0; j < postEntries.length; j++) {
+                    let post = $(postEntries[j]);
+                    if (columnCount === 1 || leftHeight <= rightHeight) {
+                        console.log("Left, +" + post.height());
+                        yearContainerInnerL.append(post);
+                        leftHeight += post.height();
+                    } else {
+                        console.log("Right, +" + post.height());
+                        yearContainerInnerR.append(post);
+                        rightHeight += post.height();
+                    }
+                }
+
+            }
+            loadingIndicator.fadeOut(600);
+        }
+
+        $(window).resize(function () {
+            reLayoutPosts();
+        });
+
+        reLayoutPosts();
     });
 </script>
 
